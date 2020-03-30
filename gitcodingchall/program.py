@@ -24,7 +24,9 @@ def problem5():
   print("Type your code here")
 
 def problem6():
-  print("Type your stuff here")
+    usr = input("Please submit your user input here: ")
+    encode = b64encode(hash(usr))
+  print("Your hashed + base64 encoded value is: " + encode)
 
 def main():
     banner = """
