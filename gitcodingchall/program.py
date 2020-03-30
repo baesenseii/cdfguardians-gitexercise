@@ -12,8 +12,22 @@ def problem3():
 def problem4():
   print("Type your stuff here")
 
-def problem5():
-  print("Type your code here")
+def problem5(code_string):
+    bad_char = [',', '-', '!', '?']
+    stringvalue = []
+    for i in range(len(code_string)):
+        code_string = code_string.lower()
+        for s in bad_char:
+            code_string = code_string,replace(s, '')
+        stringvalue = code_string.split(' ')
+        for a in range(len(code_string)):
+            if code_string == code_string[::-1]:
+                return True
+            else:
+                return False
+    user_input = input("Please submit your user input here:" )
+    print(problem5("Function result: " + user_input))
+
 
 def problem6():
   print("Type your stuff here")
