@@ -4,7 +4,15 @@ def problem1():
   print("Type your code here")
 
 def problem2():
-  print("Type your stuff here")
+    total = 1
+    randomlist = []
+    userinput = input("Enter your number of items in each group (each group seperated by commas): ")
+
+    randomlist= userinput.split(",")
+
+    for x in randomlist:
+        total = total*x
+    return total
 
 def problem3():
   print("Type your code here")
