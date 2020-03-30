@@ -26,34 +26,47 @@ def problem3():
 
   print ("".join(shifted_text))
 def problem4():
-  #print("Type your stuff here")
-  import re
-  p = input("Input your password: ")
-  x = True
+    import re
+    p = input("Input your password: ")
+    x = True
 
-  while x:
-      if not(len(p)>12):
+    while x:
+        if not(len(p)>12):
           break
-      elif not re.search("[a-z]", p):
+        elif not re.search("[a-z]", p):
             break
-      elif not re.search("[A-Z]", p):
+        elif not re.search("[A-Z]", p):
             break
-      elif not re.search("[0-9]", p):
+        elif not re.search("[0-9]", p):
             break
-      elif not re.search("[$#@!%^&*?]"):
+        elif not re.search("[$#@!%^&*?]"):
             break
-      else:
-        print("Function result: PASS")
-        x = False
-        break
+        else:
+            print("Function result: PASS")
+            x = False
+            break
 
-        if x:
-            print("Function result: FAIL")
+    if x:
+        print("Function result: FAIL")
 
 
 
-def problem5():
-  print("Type your code here")
+def problem5(code_string):
+    bad_char = [',', '-', '!', '?']
+    stringvalue = []
+    for i in range(len(code_string)):
+        code_string = code_string.lower()
+        for s in bad_char:
+            code_string = code_string,replace(s, '')
+        stringvalue = code_string.split(' ')
+        for a in range(len(code_string)):
+            if code_string == code_string[::-1]:
+                return True
+            else:
+                return False
+    user_input = input("Please submit your user input here:" )
+    print(problem5("Function result: " + user_input))
+
 
 def problem6():
     usr = input("Please submit your user input here: ")
