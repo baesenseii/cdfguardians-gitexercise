@@ -17,14 +17,61 @@ def problem2():
 def problem3():
   print("Type your code here")
 
-def problem4():
-  print("Type your stuff here")
+  original_text = input("Key in your input: ")
+  shifted_text= []
+  shift_value = int(input("key in key shift: "))
 
-def problem5():
-  print("Type your code here")
+  for i in range(len(original_text)):
+      shifted_text.append(chr(ord(original_text[i]) + shift_value))
+
+  print ("".join(shifted_text))
+def problem4():
+    import re
+    p = input("Input your password: ")
+    x = True
+
+    while x:
+        if not(len(p)>12):
+          break
+        elif not re.search("[a-z]", p):
+            break
+        elif not re.search("[A-Z]", p):
+            break
+        elif not re.search("[0-9]", p):
+            break
+        elif not re.search("[$#@!%^&*?]"):
+            break
+        else:
+            print("Function result: PASS")
+            x = False
+            break
+
+    if x:
+        print("Function result: FAIL")
+
+
+
+def problem5(code_string):
+    bad_char = [',', '-', '!', '?']
+    stringvalue = []
+    for i in range(len(code_string)):
+        code_string = code_string.lower()
+        for s in bad_char:
+            code_string = code_string,replace(s, '')
+        stringvalue = code_string.split(' ')
+        for a in range(len(code_string)):
+            if code_string == code_string[::-1]:
+                return True
+            else:
+                return False
+    user_input = input("Please submit your user input here:" )
+    print(problem5("Function result: " + user_input))
+
 
 def problem6():
-  print("Type your stuff here")
+    usr = input("Please submit your user input here: ")
+    encode = b64encode(hash(usr))
+  print("Your hashed + base64 encoded value is: " + encode)
 
 def main():
     banner = """
