@@ -26,29 +26,28 @@ def problem3():
 
   print ("".join(shifted_text))
 def problem4():
-  #print("Type your stuff here")
-  import re
-  p = input("Input your password: ")
-  x = True
+    import re
+    p = input("Input your password: ")
+    x = True
 
-  while x:
-      if not(len(p)>12):
+    while x:
+        if not(len(p)>12):
           break
-      elif not re.search("[a-z]", p):
+        elif not re.search("[a-z]", p):
             break
-      elif not re.search("[A-Z]", p):
+        elif not re.search("[A-Z]", p):
             break
-      elif not re.search("[0-9]", p):
+        elif not re.search("[0-9]", p):
             break
-      elif not re.search("[$#@!%^&*?]"):
+        elif not re.search("[$#@!%^&*?]"):
             break
-      else:
-        print("Function result: PASS")
-        x = False
-        break
+        else:
+            print("Function result: PASS")
+            x = False
+            break
 
-        if x:
-            print("Function result: FAIL")
+    if x:
+        print("Function result: FAIL")
 
 
 
