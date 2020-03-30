@@ -4,7 +4,15 @@ def problem1():
   print("Type your code here")
 
 def problem2():
-  print("Type your stuff here")
+    total = 1
+    randomlist = []
+    userinput = input("Enter your number of items in each group (each group seperated by commas): ")
+
+    randomlist= userinput.split(",")
+
+    for x in randomlist:
+        total = total*x
+    return total
 
 def problem3():
   print("Type your code here")
@@ -18,7 +26,31 @@ def problem3():
 
   print ("".join(shifted_text))
 def problem4():
-  print("Type your stuff here")
+  #print("Type your stuff here")
+  import re
+  p = input("Input your password: ")
+  x = True
+
+  while x:
+      if not(len(p)>12):
+          break
+      elif not re.search("[a-z]", p):
+            break
+      elif not re.search("[A-Z]", p):
+            break
+      elif not re.search("[0-9]", p):
+            break
+      elif not re.search("[$#@!%^&*?]"):
+            break
+      else:
+        print("Function result: PASS")
+        x = False
+        break
+
+        if x:
+            print("Function result: FAIL")
+
+
 
 def problem5():
   print("Type your code here")
