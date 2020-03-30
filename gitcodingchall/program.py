@@ -4,11 +4,27 @@ def problem1():
   print("Type your code here")
 
 def problem2():
-  print("Type your stuff here")
+    total = 1
+    randomlist = []
+    userinput = input("Enter your number of items in each group (each group seperated by commas): ")
+
+    randomlist= userinput.split(",")
+
+    for x in randomlist:
+        total = total*x
+    return total
 
 def problem3():
   print("Type your code here")
 
+  original_text = input("Key in your input: ")
+  shifted_text= []
+  shift_value = int(input("key in key shift: "))
+
+  for i in range(len(original_text)):
+      shifted_text.append(chr(ord(original_text[i]) + shift_value))
+
+  print ("".join(shifted_text))
 def problem4():
     import re
     p = input("Input your password: ")
@@ -35,11 +51,27 @@ def problem4():
 
 
 
-def problem5():
-  print("Type your code here")
+def problem5(code_string):
+    bad_char = [',', '-', '!', '?']
+    stringvalue = []
+    for i in range(len(code_string)):
+        code_string = code_string.lower()
+        for s in bad_char:
+            code_string = code_string,replace(s, '')
+        stringvalue = code_string.split(' ')
+        for a in range(len(code_string)):
+            if code_string == code_string[::-1]:
+                return True
+            else:
+                return False
+    user_input = input("Please submit your user input here:" )
+    print(problem5("Function result: " + user_input))
+
 
 def problem6():
-  print("Type your stuff here")
+    usr = input("Please submit your user input here: ")
+    encode = b64encode(hash(usr))
+  print("Your hashed + base64 encoded value is: " + encode)
 
 def main():
     banner = """
