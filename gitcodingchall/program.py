@@ -9,6 +9,14 @@ def problem2():
 def problem3():
   print("Type your code here")
 
+  original_text = input("Key in your input: ")
+  shifted_text= []
+  shift_value = int(input("key in key shift: "))
+
+  for i in range(len(original_text)):
+      shifted_text.append(chr(ord(original_text[i]) + shift_value))
+
+  print ("".join(shifted_text))
 def problem4():
   print("Type your stuff here")
 
